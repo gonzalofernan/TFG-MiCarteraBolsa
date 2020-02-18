@@ -1,0 +1,38 @@
+h1{
+	
+  	color: black;
+	text-align: left;
+	
+}
+
+p {
+	
+	width: 50%
+}
+
+#id {
+	
+	border: 1px solid black;
+	width: 50%;
+	border-collapse: collapse;
+	
+	
+}
+
+#id th{
+	
+	height: 50px;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	
+}
+
+#id td {
+	
+	padding: 10px;
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	
+	
+}
+
