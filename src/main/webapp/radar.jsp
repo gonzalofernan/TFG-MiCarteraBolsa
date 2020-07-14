@@ -23,10 +23,10 @@
     </div> 
 	<ul class="nav justify-content-center">
 	  <li class="nav-item">
-	    <a class="nav-link active" href="/pagInicio">Inicio</a>
+	    <a class="nav-link active" href="/">Inicio</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" href="/radar">Radar</a>
+	    <a class="nav-link" href="#">Radar</a>
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="#">Screener</a>
@@ -43,24 +43,36 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-8">
-			<h4>Noticias:</h4>
-			<hr>    
+			<h4>Movimientos ${owner}</h4>
+			   
 			
-			
-			<c:forEach var="lista" items="${noticias}">
-				<div class="row">	
-					<div class="col-3">
-						<img class="img-thumbnail" alt="" src="${lista.urlToImage}">
-					</div>
-					<div class="col-9">
-						<h6>${lista.title}</h6>
-						<p>${lista.description}</p>
-					</div>	
-				</div>
-			<hr>
-			</c:forEach>
+			<table class="table">
+					<thead class="">
+						<tr>
+							<th>Compañia</th>
+							<th>Fecha</th>
+							<th>Link</th>
+						</tr>	
+					</thead>
+					<tbody>
+					<c:forEach var="lista" items="${enlaces}">
+					<tr>
+							<td>${lista.companyName}</td>
+							<td>${lista.date} </td>
+							<td class="text-success"><a href=${lista.link}>Enlace</a></td>
+					</tr>
+					
+					
+					
+					</c:forEach>
+					</tbody>
+				</table>
 			</div>
 			<div class="col-4">
+			<form action="/search" method="post">
+				<input type="text" class="form-control" name="cik" placeholder="Introduzca el CIK de la empresa">
+				<button type="submit" class="btn btn-secondary my-1">Buscar</button>
+			</form>
 			<h4>Mayores ganadores</h4>
 			<hr>
 				<table class="table">
@@ -77,7 +89,7 @@
 							<td>${stock.ticker}</td>
 							<td>${stock.price} (+${stock.changes}) </td>
 							<td class="text-success">${stock.changesPercentage}</td>
-						<tr>	
+						</tr>	
 					</c:forEach>
 					
 					</tbody>

@@ -93,6 +93,13 @@
 			<artifactId>org.restlet.ext.jackson</artifactId>
 			<version>${restlet.version}</version>
 		</dependency>
+		
+		<!-- Jsoup Webscrapper -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.13.1</version>
+		</dependency>
 
 		<!-- RESTEasy -->
 		<dependency>
