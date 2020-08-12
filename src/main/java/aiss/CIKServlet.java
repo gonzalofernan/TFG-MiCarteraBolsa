@@ -21,7 +21,7 @@ public class CIKServlet extends HttpServlet {
 
 
 	@Override
-	public void doPost(final HttpServletRequest req, final HttpServletResponse resp) throws IOException {
+	public void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws IOException {
 
 		SECResources resources = new SECResources();
 		List<Form> list = resources.getBuysCIK(req.getParameter("cik"));

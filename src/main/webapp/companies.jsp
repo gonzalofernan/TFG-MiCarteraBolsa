@@ -43,23 +43,21 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-8">
-			<h4>Movimientos ${owner}</h4>
+			<h4>Resultados de " ${name} "</h4>
 			   
 			
 			<table class="table">
 					<thead class="">
 						<tr>
 							<th>Compañia</th>
-							<th>Fecha</th>
-							<th>Link</th>
+							<th>CIK</th>
 						</tr>	
 					</thead>
 					<tbody>
-					<c:forEach var="lista" items="${enlaces}">
+					<c:forEach var="lista" items="${companies}">
 					<tr>
-							<td>${lista.companyName}</td>
-							<td>${lista.date} </td>
-							<td class="text-success"><a href=${lista.link}>Enlace</a></td>
+							<td><a href="/search?cik=${lista.cik}">${lista.name}</a></td>
+							<td>${lista.cik} </td>
 					</tr>
 					
 					
@@ -72,51 +70,7 @@
 			<form action="/companies" method="post">
 				<input type="text" class="form-control" name="name" placeholder="Buscar por nombre de la empresa">
 				<button type="submit" class="btn btn-secondary my-1">Buscar</button>
-			</form>
-			<h4>Mayores ganadores</h4>
-			<hr>
-				<table class="table">
-					<thead class="bg-dark text-white">
-						<tr>
-							<th>Ticker</th>
-							<th>Precio</th>
-							<th>Cambio</th>
-						</tr>	
-					</thead>
-					<tbody>
-					<c:forEach var="stock" items="${gainers}">
-						<tr>
-							<td>${stock.ticker}</td>
-							<td>${stock.price} (+${stock.changes}) </td>
-							<td class="text-success">${stock.changesPercentage}</td>
-						</tr>	
-					</c:forEach>
-					
-					</tbody>
-				</table>
-				
-				<h4>Mayores perdedores</h4>
-			<hr>
-				<table class="table">
-					<thead class="bg-dark text-white">
-						<tr>
-							<th>Ticker</th>
-							<th>Precio</th>
-							<th>Cambio</th>
-						</tr>	
-					</thead>
-					<tbody>
-					<c:forEach var="stock" items="${losers}">
-						<tr>
-							<td>${stock.ticker}</td>
-							<td>${stock.price} (+${stock.changes}) </td>
-							<td class="text-danger">${stock.changesPercentage}</td>
-						<tr>	
-					</c:forEach>
-					
-					</tbody>
-				</table>
-				
+			</form>	
 			</div>		
 		</div>	
 	</div>

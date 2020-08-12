@@ -33,6 +33,26 @@
 		<url-pattern>/search</url-pattern>
 	</servlet-mapping> 
 	
+	<!-- Search company -->
+	<servlet>
+		<servlet-name>SearchCompanyServlet</servlet-name>
+		<servlet-class>aiss.SearchCompanyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchCompanyServlet</servlet-name>
+		<url-pattern>/companies</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Portfolio Servlet -->
+	<servlet>
+		<servlet-name>PortfolioServlet</servlet-name>
+		<servlet-class>aiss.PortfolioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PortfolioServlet</servlet-name>
+		<url-pattern>/portfolio</url-pattern>
+	</servlet-mapping>
+	
 	<!--  OAUTH SERVLETS 
   
   	For each OAuth 2.0 service, you need to create two servlets: one for the initiation 
