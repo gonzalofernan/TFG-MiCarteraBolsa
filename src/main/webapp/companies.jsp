@@ -29,11 +29,9 @@
 	    <a class="nav-link" href="/radar">Radar</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" href="/portfolio">Screener</a>
+	    <a class="nav-link" href="/portfolio">Portfolio</a>
 	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link disabled" href="#">Disabled</a>
-	  </li>
+	  
 	</ul>  
     
     <hr>
