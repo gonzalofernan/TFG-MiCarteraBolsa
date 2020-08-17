@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import aiss.model.forms.Form;
+import aiss.resources.FinancialPrepResources;
 import aiss.resources.SECResources;
 
 public class CIKServlet extends HttpServlet {
@@ -24,7 +25,9 @@ public class CIKServlet extends HttpServlet {
 	public void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws IOException {
 
 		SECResources resources = new SECResources();
+		FinancialPrepResources fpResources = new FinancialPrepResources();
 		List<Form> list = resources.getBuysCIK(req.getParameter("cik"));
+		List<String> holdings = fpResources.getHoldings(req.getParameter("cik"));
 
 		for (Form f : list) {
 			f.setCompanyName(f.getCompanyName().replace("(see all company filings)", ""));
@@ -32,6 +35,7 @@ public class CIKServlet extends HttpServlet {
 
 		req.setAttribute("enlaces", list);
 		req.setAttribute("owner", list.get(0).getOwner());
+		req.setAttribute("holdings", holdings);
 
 		try {
 			req.getRequestDispatcher("radar.jsp").forward(req, resp);

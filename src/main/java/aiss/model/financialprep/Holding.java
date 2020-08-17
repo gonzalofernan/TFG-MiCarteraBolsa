@@ -12,241 +12,231 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "date",
-    "fillingDate",
-    "acceptedDate",
-    "cik",
-    "cusip",
-    "tickercusip",
-    "nameOfIssuer",
-    "shares",
-    "titleOfClass",
-    "value",
-    "link",
-    "finalLink"
+	"date", "fillingDate", "acceptedDate", "cik", "cusip", "tickercusip", "nameOfIssuer", "shares", "titleOfClass", "value", "link", "finalLink"
 })
 public class Holding {
 
-    @JsonProperty("date")
-    private String date;
-    @JsonProperty("fillingDate")
-    private String fillingDate;
-    @JsonProperty("acceptedDate")
-    private String acceptedDate;
-    @JsonProperty("cik")
-    private String cik;
-    @JsonProperty("cusip")
-    private String cusip;
-    @JsonProperty("tickercusip")
-    private String tickercusip;
-    @JsonProperty("nameOfIssuer")
-    private String nameOfIssuer;
-    @JsonProperty("shares")
-    private Integer shares;
-    @JsonProperty("titleOfClass")
-    private String titleOfClass;
-    @JsonProperty("value")
-    private Integer value;
-    @JsonProperty("link")
-    private String link;
-    @JsonProperty("finalLink")
-    private String finalLink;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+	@JsonProperty("date")
+	private String				date;
+	@JsonProperty("fillingDate")
+	private String				fillingDate;
+	@JsonProperty("acceptedDate")
+	private String				acceptedDate;
+	@JsonProperty("cik")
+	private String				cik;
+	@JsonProperty("cusip")
+	private String				cusip;
+	@JsonProperty("tickercusip")
+	private String				tickercusip;
+	@JsonProperty("nameOfIssuer")
+	private String				nameOfIssuer;
+	@JsonProperty("shares")
+	private Long				shares;
+	@JsonProperty("titleOfClass")
+	private String				titleOfClass;
+	@JsonProperty("value")
+	private Long				value;
+	@JsonProperty("link")
+	private String				link;
+	@JsonProperty("finalLink")
+	private String				finalLink;
+	@JsonIgnore
+	private Map<String, Object>	additionalProperties	= new HashMap<String, Object>();
 
-    @JsonProperty("date")
-    public String getDate() {
-        return date;
-    }
 
-    @JsonProperty("date")
-    public void setDate(String date) {
-        this.date = date;
-    }
+	@JsonProperty("date")
+	public String getDate() {
+		return date;
+	}
 
-    public Holding withDate(String date) {
-        this.date = date;
-        return this;
-    }
+	@JsonProperty("date")
+	public void setDate(final String date) {
+		this.date = date;
+	}
 
-    @JsonProperty("fillingDate")
-    public String getFillingDate() {
-        return fillingDate;
-    }
+	public Holding withDate(final String date) {
+		this.date = date;
+		return this;
+	}
 
-    @JsonProperty("fillingDate")
-    public void setFillingDate(String fillingDate) {
-        this.fillingDate = fillingDate;
-    }
+	@JsonProperty("fillingDate")
+	public String getFillingDate() {
+		return fillingDate;
+	}
 
-    public Holding withFillingDate(String fillingDate) {
-        this.fillingDate = fillingDate;
-        return this;
-    }
+	@JsonProperty("fillingDate")
+	public void setFillingDate(final String fillingDate) {
+		this.fillingDate = fillingDate;
+	}
 
-    @JsonProperty("acceptedDate")
-    public String getAcceptedDate() {
-        return acceptedDate;
-    }
+	public Holding withFillingDate(final String fillingDate) {
+		this.fillingDate = fillingDate;
+		return this;
+	}
 
-    @JsonProperty("acceptedDate")
-    public void setAcceptedDate(String acceptedDate) {
-        this.acceptedDate = acceptedDate;
-    }
+	@JsonProperty("acceptedDate")
+	public String getAcceptedDate() {
+		return acceptedDate;
+	}
 
-    public Holding withAcceptedDate(String acceptedDate) {
-        this.acceptedDate = acceptedDate;
-        return this;
-    }
+	@JsonProperty("acceptedDate")
+	public void setAcceptedDate(final String acceptedDate) {
+		this.acceptedDate = acceptedDate;
+	}
 
-    @JsonProperty("cik")
-    public String getCik() {
-        return cik;
-    }
+	public Holding withAcceptedDate(final String acceptedDate) {
+		this.acceptedDate = acceptedDate;
+		return this;
+	}
 
-    @JsonProperty("cik")
-    public void setCik(String cik) {
-        this.cik = cik;
-    }
+	@JsonProperty("cik")
+	public String getCik() {
+		return cik;
+	}
 
-    public Holding withCik(String cik) {
-        this.cik = cik;
-        return this;
-    }
+	@JsonProperty("cik")
+	public void setCik(final String cik) {
+		this.cik = cik;
+	}
 
-    @JsonProperty("cusip")
-    public String getCusip() {
-        return cusip;
-    }
+	public Holding withCik(final String cik) {
+		this.cik = cik;
+		return this;
+	}
 
-    @JsonProperty("cusip")
-    public void setCusip(String cusip) {
-        this.cusip = cusip;
-    }
+	@JsonProperty("cusip")
+	public String getCusip() {
+		return cusip;
+	}
 
-    public Holding withCusip(String cusip) {
-        this.cusip = cusip;
-        return this;
-    }
+	@JsonProperty("cusip")
+	public void setCusip(final String cusip) {
+		this.cusip = cusip;
+	}
 
-    @JsonProperty("tickercusip")
-    public String getTickercusip() {
-        return tickercusip;
-    }
+	public Holding withCusip(final String cusip) {
+		this.cusip = cusip;
+		return this;
+	}
 
-    @JsonProperty("tickercusip")
-    public void setTickercusip(String tickercusip) {
-        this.tickercusip = tickercusip;
-    }
+	@JsonProperty("tickercusip")
+	public String getTickercusip() {
+		return tickercusip;
+	}
 
-    public Holding withTickercusip(String tickercusip) {
-        this.tickercusip = tickercusip;
-        return this;
-    }
+	@JsonProperty("tickercusip")
+	public void setTickercusip(final String tickercusip) {
+		this.tickercusip = tickercusip;
+	}
 
-    @JsonProperty("nameOfIssuer")
-    public String getNameOfIssuer() {
-        return nameOfIssuer;
-    }
+	public Holding withTickercusip(final String tickercusip) {
+		this.tickercusip = tickercusip;
+		return this;
+	}
 
-    @JsonProperty("nameOfIssuer")
-    public void setNameOfIssuer(String nameOfIssuer) {
-        this.nameOfIssuer = nameOfIssuer;
-    }
+	@JsonProperty("nameOfIssuer")
+	public String getNameOfIssuer() {
+		return nameOfIssuer;
+	}
 
-    public Holding withNameOfIssuer(String nameOfIssuer) {
-        this.nameOfIssuer = nameOfIssuer;
-        return this;
-    }
+	@JsonProperty("nameOfIssuer")
+	public void setNameOfIssuer(final String nameOfIssuer) {
+		this.nameOfIssuer = nameOfIssuer;
+	}
 
-    @JsonProperty("shares")
-    public Integer getShares() {
-        return shares;
-    }
+	public Holding withNameOfIssuer(final String nameOfIssuer) {
+		this.nameOfIssuer = nameOfIssuer;
+		return this;
+	}
 
-    @JsonProperty("shares")
-    public void setShares(Integer shares) {
-        this.shares = shares;
-    }
+	@JsonProperty("shares")
+	public Long getShares() {
+		return shares;
+	}
 
-    public Holding withShares(Integer shares) {
-        this.shares = shares;
-        return this;
-    }
+	@JsonProperty("shares")
+	public void setShares(final Long shares) {
+		this.shares = shares;
+	}
 
-    @JsonProperty("titleOfClass")
-    public String getTitleOfClass() {
-        return titleOfClass;
-    }
+	public Holding withShares(final Long shares) {
+		this.shares = shares;
+		return this;
+	}
 
-    @JsonProperty("titleOfClass")
-    public void setTitleOfClass(String titleOfClass) {
-        this.titleOfClass = titleOfClass;
-    }
+	@JsonProperty("titleOfClass")
+	public String getTitleOfClass() {
+		return titleOfClass;
+	}
 
-    public Holding withTitleOfClass(String titleOfClass) {
-        this.titleOfClass = titleOfClass;
-        return this;
-    }
+	@JsonProperty("titleOfClass")
+	public void setTitleOfClass(final String titleOfClass) {
+		this.titleOfClass = titleOfClass;
+	}
 
-    @JsonProperty("value")
-    public Integer getValue() {
-        return value;
-    }
+	public Holding withTitleOfClass(final String titleOfClass) {
+		this.titleOfClass = titleOfClass;
+		return this;
+	}
 
-    @JsonProperty("value")
-    public void setValue(Integer value) {
-        this.value = value;
-    }
+	@JsonProperty("value")
+	public Long getValue() {
+		return value;
+	}
 
-    public Holding withValue(Integer value) {
-        this.value = value;
-        return this;
-    }
+	@JsonProperty("value")
+	public void setValue(final Long value) {
+		this.value = value;
+	}
 
-    @JsonProperty("link")
-    public String getLink() {
-        return link;
-    }
+	public Holding withValue(final Long value) {
+		this.value = value;
+		return this;
+	}
 
-    @JsonProperty("link")
-    public void setLink(String link) {
-        this.link = link;
-    }
+	@JsonProperty("link")
+	public String getLink() {
+		return link;
+	}
 
-    public Holding withLink(String link) {
-        this.link = link;
-        return this;
-    }
+	@JsonProperty("link")
+	public void setLink(final String link) {
+		this.link = link;
+	}
 
-    @JsonProperty("finalLink")
-    public String getFinalLink() {
-        return finalLink;
-    }
+	public Holding withLink(final String link) {
+		this.link = link;
+		return this;
+	}
 
-    @JsonProperty("finalLink")
-    public void setFinalLink(String finalLink) {
-        this.finalLink = finalLink;
-    }
+	@JsonProperty("finalLink")
+	public String getFinalLink() {
+		return finalLink;
+	}
 
-    public Holding withFinalLink(String finalLink) {
-        this.finalLink = finalLink;
-        return this;
-    }
+	@JsonProperty("finalLink")
+	public void setFinalLink(final String finalLink) {
+		this.finalLink = finalLink;
+	}
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
+	public Holding withFinalLink(final String finalLink) {
+		this.finalLink = finalLink;
+		return this;
+	}
 
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+	@JsonAnyGetter
+	public Map<String, Object> getAdditionalProperties() {
+		return this.additionalProperties;
+	}
 
-    public Holding withAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-        return this;
-    }
+	@JsonAnySetter
+	public void setAdditionalProperty(final String name, final Object value) {
+		this.additionalProperties.put(name, value);
+	}
+
+	public Holding withAdditionalProperty(final String name, final Object value) {
+		this.additionalProperties.put(name, value);
+		return this;
+	}
 
 }

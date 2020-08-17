@@ -65,6 +65,7 @@ public class FinancialPrepResources {
 		List<String> res = new ArrayList<String>();
 		Holding[] holdings;
 		HttpURLConnection httpcon = (HttpURLConnection) url.openConnection();
+		httpcon.setConnectTimeout(7000);
 		httpcon.setReadTimeout(10000);
 		InputStreamReader reader = new InputStreamReader(httpcon.getInputStream());
 
