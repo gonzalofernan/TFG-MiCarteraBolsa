@@ -51,7 +51,7 @@
 						<img class="img-thumbnail" alt="" src="${lista.urlToImage}">
 					</div>
 					<div class="col-9">
-						<h6>${lista.title}</h6>
+						<h6><a href="${lista.url}">${lista.title}</a></h6>
 						<p>${lista.description}</p>
 					</div>	
 				</div>
@@ -72,7 +72,9 @@
 					<tbody>
 					<c:forEach var="stock" items="${gainers}">
 						<tr>
-							<td>${stock.ticker}</td>
+							<td>
+							<a class="tab-link" href="https://finance.yahoo.com/quote/${stock.ticker}">${stock.ticker}</a>
+							</td>
 							<td>${stock.price} (+${stock.changes}) </td>
 							<td class="text-success">${stock.changesPercentage}</td>
 						<tr>	
@@ -94,7 +96,9 @@
 					<tbody>
 					<c:forEach var="stock" items="${losers}">
 						<tr>
-							<td>${stock.ticker}</td>
+							<td>
+							<a class="tab-link" href="https://finance.yahoo.com/quote/${stock.ticker}">${stock.ticker}</a>
+							</td>
 							<td>${stock.price} (+${stock.changes}) </td>
 							<td class="text-danger">${stock.changesPercentage}</td>
 						<tr>	

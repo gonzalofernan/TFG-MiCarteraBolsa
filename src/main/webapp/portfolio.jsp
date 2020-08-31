@@ -54,7 +54,10 @@
 					<tbody>
 					<c:forEach var="lista" items="${list}">
 					<tr>
-							<td>${lista.name}</a></td>
+							<td>
+							<a class="tab-link" href="https://finance.yahoo.com/quote/${lista.name}">${lista.name}</a>
+							</td>
+						
 							<td>${lista.number} </td>
 					</tr>
 					

@@ -3,7 +3,7 @@ package aiss;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -40,7 +40,7 @@ public class PortfolioServlet extends HttpServlet {
 
 			list.add(p);
 		}
-		list.sort(Comparator.comparing(Portfolio::getNumber).reversed());
+		Collections.sort(list, Collections.reverseOrder());
 
 		req.setAttribute("list", list);
 

@@ -1,7 +1,7 @@
 
 package aiss.model.financialprep;
 
-public class Portfolio implements Comparable {
+public class Portfolio implements Comparable<Portfolio> {
 
 	private String	name;
 	private Integer	number;
@@ -24,9 +24,9 @@ public class Portfolio implements Comparable {
 	}
 
 	@Override
-	public int compareTo(final Object o) {
-		Portfolio e = (Portfolio) o;
-		return getNumber().compareTo(e.getNumber());
+	public int compareTo(final Portfolio o) {
+		Portfolio e = o;
+		return this.getNumber().compareTo(e.getNumber());
 	}
 
 }
